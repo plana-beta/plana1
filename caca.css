@@ -1,3 +1,4 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -46,11 +47,9 @@ header {
     font-weight: 500;
 }
 
-/* Le secret */
 .login {
     margin-left: auto;
 }
-
 
 /* Sous-menu */
 .submenu {
@@ -79,6 +78,7 @@ header {
     display: block;
 }
 
+/* HERO */
 .hero {
     display: grid;
     grid-template-columns: 1fr 1.2fr 1fr;
@@ -130,6 +130,7 @@ header {
     max-width: 400px;
 }
 
+/* FEATURES */
 .features {
     padding: 80px 40px;
     background: #f7f7f7;
@@ -204,6 +205,7 @@ footer {
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
+/* COOKIE BANNER */
 #cookie-banner {
     position: fixed;
     bottom: 20px;
@@ -253,4 +255,58 @@ footer {
     background: transparent;
     color: white;
     border: 1px solid white;
+}
+
+/* ----------------------------- */
+/* 📱 RESPONSIVE MOBILE */
+/* ----------------------------- */
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .menu {
+        margin-left: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .login {
+        margin-left: 0;
+    }
+
+    /* HERO */
+    .hero {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .hero-image {
+        height: 40vh;
+    }
+
+    .hero-center {
+        padding: 30px 20px;
+    }
+}
+
+/* COOKIE BANNER MOBILE */
+@media (max-width: 600px) {
+    #cookie-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        max-width: 95%;
+    }
+
+    .cookie-buttons {
+        justify-content: center;
+    }
 }
