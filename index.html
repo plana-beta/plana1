@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Plana</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="logo1.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="caca.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Plana</div>
+
+    <nav class="menu">
+        <div class="menu-item dropdown">
+            <span>Activités</span>
+            <ul class="submenu">
+                <li>Course à pied</li>
+                <li>Cyclisme</li>
+                <li>Natation</li>
+            </ul>
+        </div>
+
+        <div class="menu-item">Fonctionnalités</div>
+        <div class="menu-item">Abonnement</div>
+        <div class="menu-item"></div>
+    </nav>
+
+    <div class="menu-item login">Se connecter</div>
+</header>
+
+
+<section class="hero">
+    <div class="hero-image run"></div>
+
+    <div class="hero-center">
+        <h1>Enregistre. Analyse. Progresse.</h1>
+        <p>Le suivi sportif simple et moderne pour courir, rouler et bien plus.</p>
+        <a href="#" class="btn">Commencer gratuitement</a>
+    </div>
+
+    <div class="hero-image bike"></div>
+</section>
+
+<section class="features">
+    <h2>Pourquoi utiliser Plana ?</h2>
+
+    <div class="features-grid">
+        <div class="feature">
+            <h3>Suivi d’activités</h3>
+            <p>Course, vélo, natation et bien plus encore, tout au même endroit.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Statistiques détaillées</h3>
+            <p>Analyse tes performances et visualise tes progrès.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Communauté</h3>
+            <p>Partage tes performances avec ton entraineur et tes amis.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Prêt à te dépasser ?</h2>
+    <p>Rejoins des milliers de sportifs dès aujourd’hui.</p>
+    <a href="#" class="btn">Créer un compte</a>
+</section>
+
+<footer>
+    © 2026 Plana – Projet éducatif
+</footer>
+
+<!-- 🍪 BANDEAU COOKIES -->
+<div id="cookie-banner">
+    <p>
+        Nous utilisons des cookies pour améliorer votre expérience.
+        <a href="#">En savoir plus</a>
+    </p>
+    <div class="cookie-buttons">
+        <button id="accept-cookies">Accepter</button>
+        <button id="reject-cookies">Refuser</button>
+    </div>
+</div>
+
+<!-- SCRIPT COOKIES -->
+<script>
+    const banner = document.getElementById("cookie-banner");
+    const acceptBtn = document.getElementById("accept-cookies");
+    const rejectBtn = document.getElementById("reject-cookies");
+
+    if (localStorage.getItem("cookiesChoice")) {
+        banner.style.display = "none";
+    }
+
+    acceptBtn.addEventListener("click", () => {
+        localStorage.setItem("cookiesChoice", "accepted");
+        banner.style.display = "none";
+    });
+
+    rejectBtn.addEventListener("click", () => {
+        localStorage.setItem("cookiesChoice", "rejected");
+        banner.style.display = "none";
+    });
+</script>
+
+</body>
+</html>
